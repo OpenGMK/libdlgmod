@@ -98,7 +98,7 @@ vector<string> string_split(string str, char delimiter) {
 
 string osascript(bool type, string script) {
   string result;
-  if (!type && [NSThread isMainThread]) {
+  if (!type && [NSThread isMainThread] && [[NSApp windows] count] > 0) {
     NSDictionary *errorInfo = nullptr;
     NSString *sourceCode = [NSString stringWithUTF8String:script.c_str()];
     NSAppleScript *appleScript = [[NSAppleScript alloc] initWithSource:sourceCode];
