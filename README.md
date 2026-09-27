@@ -3,7 +3,7 @@ Cross-platform native dialog boxes which match your desktop environment and supp
 
 Where applicable, this library will use `kdialog` for Qt dialogs on platforms which use Qt as their primary GUI toolkit, (including support for auto-detecting the `KDE`, `TDE`, `LXQt`, `Razor`, `Cutefish`, `Deepin`, `DDE`, `UKUI`, `Lumina`, and `Qt`, as values for `XDG_CURRENT_DESKTOP`). 
 
-The library will use `zenity` for GTK on platforms which don't use Qt as their primary GUI toolkit, WinAPI on Windows, and AppKit on macOS, (or OSAScript on macOS, when outside the main-thread). All platforms support multi-threading, given one dialog is opened at a time, and not multiple, due to their underlying implementations relying on `static` and global variables.
+The library will use `zenity` for GTK on platforms which don't use Qt as their primary GUI toolkit, WinAPI on Windows, and AppKit on macOS, (or OSAScript on macOS, when outside the main-thread). All platforms support multi-threading, given one dialog is opened at a time, and not multiple, due to relying on `static` and global variables.
 
 Supports Windows, macOS, Linux, FreeBSD, DragonFly BSD, NetBSD, OpenBSD, Solaris, and illumos. No third-party dependencies. If `kdialog` or `zenity` do not exist on the target Free Desktop platform you can use whatever fallback of your choosing. Setting the owner window needs to take on one the following forms: an `HWND` on Windows, an `NSWindow *` on macOS, or an `XID`/`Window` on X11/XWayland for Free Desktop platforms. 
 
