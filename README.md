@@ -1,5 +1,5 @@
 # Dialog Module - The Universal Dialog Library!
-Cross-platform native dialog boxes which match your desktop environment and support a multiple file filter drop down box. On Linux, this library uses the XDG Desktop Portal with D-Bus to produce file and directory selection dialogs, (while wrapping the "[Native File Dialog Extended](https://github.com/btzy/nativefiledialog-extended)" library by [Bernard Teo](https://github.com/btzy). 
+Cross-platform native dialog boxes which match your desktop environment and support a multiple file filter drop down box. On Linux, this library uses the XDG Desktop Portal with D-Bus to produce file and directory selection dialogs, (while wrapping the "[Native File Dialog Extended](https://github.com/btzy/nativefiledialog-extended)" library by [Bernard Teo](https://github.com/btzy)). 
 
 This library will attempt to use `kdialog` for Qt dialogs on Free Desktop platforms which use Qt as their primary GUI toolkit, (including support for auto-detecting `KDE`, `TDE`, `LXQt`, `Razor`, `Cutefish`, `Deepin`, `DDE`, `UKUI`, `Lumina`, and `Qt`, as potential values for the system-defined `XDG_CURRENT_DESKTOP` environment variable). 
 
