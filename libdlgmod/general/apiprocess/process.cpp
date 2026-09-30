@@ -601,8 +601,8 @@ namespace {
     #if (defined(_WIN32) || defined(_WIN64))
     bool result = false;
     HANDLE proc_handle = nullptr, parent_proc_handle = nullptr;
-    if ((proc_handle = open_process_with_debug_privilege(procid))) {
-      if ((parent_proc_handle = open_process_with_debug_privilege(pprocid))) {
+    if ((proc_handle = open_process_with_debug_privilege(proc_id))) {
+      if ((parent_proc_handle = open_process_with_debug_privilege(parent_proc_id))) {
         FILETIME proc_creation_time, proc_exit_time, proc_kernel_time, proc_user_time;
         FILETIME parent_proc_creation_time, parent_proc_exit_time, parent_proc_kernel_time, parent_proc_user_time;
         if (GetProcessTimes(proc_handle, &proc_creation_time, &proc_exit_time, &proc_kernel_time, &proc_user_time) &&
