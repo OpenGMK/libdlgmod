@@ -226,10 +226,10 @@ static inline void change_relative_to_qt() {
       if (!str.empty()) {
         std::transform(str.begin(), str.end(), str.begin(), ::toupper);
         is_qt = (str.find("KDE") != string::npos || str.find("TDE") != string::npos || 
-        str.find("LXQT") != string::npos || str.find("RAZOR") != string::npos || 
-        str.find("CUTEFISH") != string::npos || str.find("DEEPIN") != string::npos || 
-        str.find("DDE") != string::npos || str.find("UKUI") != string::npos || 
-        str.find("LUMINA") != string::npos || str.find("QT") != string::npos);
+          str.find("LXQT") != string::npos || str.find("RAZOR") != string::npos || 
+          str.find("CUTEFISH") != string::npos || str.find("DEEPIN") != string::npos || 
+          str.find("DDE") != string::npos || str.find("UKUI") != string::npos || 
+          str.find("LUMINA") != string::npos || str.find("QT") != string::npos);
       }
       if (is_qt) {
         struct stat st;
